@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class CharacterController : MonoBehaviour
+public class PlayerCharacterController : MonoBehaviour
 {
+    [Min(0.0f)]
     public float maxSpeed = 10.0f;
 
     private Rigidbody2D rigidBody;
@@ -16,8 +17,11 @@ public class CharacterController : MonoBehaviour
     {
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
-        Vector2 directionRaw = new Vector2(horiz, vert);
-        Vector2 velocity = directionRaw.magnitude * maxSpeed * directionRaw.normalized;
+
+        // Map the square range of {(x,y) | -1 <= x,y <= 1} into unit circle {(x,y) | x^2 + y^2 <= 1}
+        float normalizingFactor = Mathf.Max(Mathf.Abs(horiz), Mathf.Abs(vert));
+        Vector2 direction= new Vector2(horiz, vert).normalized;
+        Vector2 velocity = normalizingFactor * maxSpeed * direction;
 
         rigidBody.velocity = velocity;
     }
