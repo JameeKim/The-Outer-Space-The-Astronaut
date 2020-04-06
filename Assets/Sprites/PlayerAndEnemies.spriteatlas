@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerAndEnemies
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: afee9dcc9e83d0447b771e8ed68a15e4, type: 3}
+    totalSpriteSurfaceArea: 50742
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: e6e0c0d02ee1712498d1bf6c1a2235bc, type: 3}
+  - {fileID: 21300000, guid: ba8e7e136a5b3c04e8c960340adeaf2d, type: 3}
+  - {fileID: 21300000, guid: 95fa1ba35ea01fa45b62638b0a8955d3, type: 3}
+  - {fileID: 21300000, guid: 0068bbb7701972644bb791dd8bda6504, type: 3}
+  - {fileID: 21300000, guid: 72a41aec8da519b45bd9bb58a5bb4fce, type: 3}
+  - {fileID: 21300000, guid: 93e2260dc41b0464eb203bf549a204c9, type: 3}
+  - {fileID: 21300000, guid: 27d2086d30d555945891fd40612f9a24, type: 3}
+  - {fileID: 21300000, guid: df45856e0ad063e4abd6895316d0ac00, type: 3}
+  - {fileID: 21300000, guid: f488ccee9cc4ecb4586fdd9bbef453d9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - alienYellow
+  - alienYellow_walk1_flipped
+  - alienYellow_hurt
+  - alienYellow_walk1
+  - alienYellow_stand_flipped
+  - alienYellow_walk2_flipped
+  - alienYellow_stand
+  - alienYellow_walk2
+  - alienYellow_hurt_flipped
+  m_Tag: PlayerAndEnemies
+  m_IsVariant: 0
