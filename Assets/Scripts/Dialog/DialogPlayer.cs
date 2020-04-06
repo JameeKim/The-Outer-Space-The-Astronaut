@@ -18,6 +18,22 @@ namespace Dialog {
             dialogPresenter.StartDialog(dialogList);
         }
 
+        /// <summary>
+        ///   <para>Pause the game.</para>
+        /// </summary>
+        public void StartDialog()
+        {
+            Time.timeScale = 0.0f;
+        }
+
+        /// <summary>
+        ///   <para>Resume the paused game.</para>
+        /// </summary>
+        public void EndDialog()
+        {
+            Time.timeScale = 1.0f;
+        }
+
 #if UNITY_EDITOR
         private bool MustBeSet(DialogPresenter value, ref string errorMsg)
         {
