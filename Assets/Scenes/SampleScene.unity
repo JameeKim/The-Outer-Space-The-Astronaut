@@ -34223,6 +34223,7 @@ GameObject:
   - component: {fileID: 723669730}
   - component: {fileID: 723669729}
   - component: {fileID: 723669728}
+  - component: {fileID: 723669733}
   - component: {fileID: 723669732}
   m_Layer: 5
   m_Name: Dialog
@@ -34370,6 +34371,18 @@ MonoBehaviour:
   previousButtonImage: {fileID: 1207631356}
   previousButtonText: {fileID: 1261426946}
   nextButtonText: {fileID: 1270849321}
+--- !u!114 &723669733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723669727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf90a76b9b97481cadab09811082e7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &862470097
 PrefabInstance:
   m_ObjectHideFlags: 0
