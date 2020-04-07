@@ -119,9 +119,9 @@ namespace Combat {
 
         private void Start()
         {
-            currentHealth = combatStat.maxHealth;
-            currentAttack = combatStat.attack;
-            currentDefense = combatStat.defense;
+            InternalCurrentHealth = combatStat.maxHealth;
+            InternalCurrentAttack = combatStat.attack;
+            InternalCurrentDefense = combatStat.defense;
         }
 
         private void OnEnable()

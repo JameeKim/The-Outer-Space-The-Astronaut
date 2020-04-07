@@ -568,7 +568,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -6, y: 0}
-  m_SizeDelta: {x: 48, y: 28}
+  m_SizeDelta: {x: 94, y: 28}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &187993731
 MonoBehaviour:
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -596,12 +596,12 @@ MonoBehaviour:
     m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 5
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100%
+  m_Text: 100 / 100
 --- !u!222 &187993732
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -870,6 +870,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 340951506}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &344317712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3290682797018863861, guid: 28413577d43ecfc49b951c3476d0ff3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1623896298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c3c8cefb5d0ca4db90afe5e6ded743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &380170463
 GameObject:
   m_ObjectHideFlags: 0
@@ -36118,16 +36130,49 @@ MonoBehaviour:
       m_Calls: []
   onHealthChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1860503938}
+        m_MethodName: SetHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHealthZero:
     m_PersistentCalls:
       m_Calls: []
   onAttackChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1860503938}
+        m_MethodName: SetAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDefenseChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1860503938}
+        m_MethodName: SetDefense
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   currentHealth: 0
   currentAttack: 0
   currentDefense: 0
@@ -36244,10 +36289,10 @@ RectTransform:
   m_Father: {fileID: 1437489259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 24}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &929221300
 MonoBehaviour:
@@ -37089,6 +37134,7 @@ GameObject:
   - component: {fileID: 1257251265}
   - component: {fileID: 1257251267}
   - component: {fileID: 1257251266}
+  - component: {fileID: 1257251268}
   m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
@@ -37153,6 +37199,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257251264}
   m_CullTransparentMesh: 0
+--- !u!114 &1257251268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257251264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bab34060a3c4041867571bcefc9d1b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  innerBar: {fileID: 929221299}
+  valueText: {fileID: 187993731}
 --- !u!114 &1270849321 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1868802094939276325, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
@@ -37446,7 +37506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -37458,7 +37518,7 @@ MonoBehaviour:
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 3
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
@@ -37508,6 +37568,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1438051088 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3290682797018863861, guid: 28413577d43ecfc49b951c3476d0ff3e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8177607146571972055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c3c8cefb5d0ca4db90afe5e6ded743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1474886160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38463,6 +38535,7 @@ GameObject:
   - component: {fileID: 1860503936}
   - component: {fileID: 1860503935}
   - component: {fileID: 1860503934}
+  - component: {fileID: 1860503938}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -38551,6 +38624,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1860503938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860503933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b257de6abcb433999df33d5c56689a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1257251268}
+  attackStat: {fileID: 1438051088}
+  defenseStat: {fileID: 344317712}
 --- !u!4 &1865998425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 105883095654265182, guid: 8fc0da7ec42898f44af6fe711b838b24,
