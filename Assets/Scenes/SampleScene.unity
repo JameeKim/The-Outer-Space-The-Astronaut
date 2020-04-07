@@ -35837,6 +35837,7 @@ GameObject:
   - component: {fileID: 868935326}
   - component: {fileID: 868935327}
   - component: {fileID: 868935328}
+  - component: {fileID: 868935330}
   - component: {fileID: 868935329}
   m_Layer: 9
   m_Name: PlayerChatacter
@@ -35923,6 +35924,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteAnimator: {fileID: 713659778}
+--- !u!114 &868935330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868935324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a2ebe2cbba641deafac87bac04e3a42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatStat: {fileID: 11400000, guid: 5e46f10d4529c4342a15d7fe0d9557c6, type: 2}
+  attackTargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  onAttack:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthZero:
+    m_PersistentCalls:
+      m_Calls: []
+  onAttackChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDefenseChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  currentHealth: 0
+  currentAttack: 0
+  currentDefense: 0
 --- !u!1 &872891245
 GameObject:
   m_ObjectHideFlags: 0
