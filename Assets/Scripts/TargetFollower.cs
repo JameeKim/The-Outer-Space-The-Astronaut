@@ -1,6 +1,7 @@
 ﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class TargetFollower : MonoBehaviour
 {
     [Title("Target")]

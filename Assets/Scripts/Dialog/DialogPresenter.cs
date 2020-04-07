@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Dialog {
+    [DisallowMultipleComponent]
     public class DialogPresenter : MonoBehaviour
     {
         [Title("Properties")]

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace Puzzles.SteppingButton {
+    [DisallowMultipleComponent]
     public class SteppingButtonManager : MonoBehaviour
     {
         [InlineEditor(InlineEditorObjectFieldModes.Hidden)]

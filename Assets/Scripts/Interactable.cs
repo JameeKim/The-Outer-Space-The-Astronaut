@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[DisallowMultipleComponent]
 [RequireComponent(typeof(Collider2D))]
 public class Interactable : MonoBehaviour
 {

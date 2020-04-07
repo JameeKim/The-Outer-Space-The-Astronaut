@@ -2,6 +2,7 @@
 using UnityEngine;
 
 namespace Dialog {
+    [DisallowMultipleComponent]
     public class DialogPlayer : MonoBehaviour
     {
         [InfoBox("This component is meant to be used as a way to register a callback to play a dialog. "
