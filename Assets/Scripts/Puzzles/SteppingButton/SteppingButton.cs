@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace Puzzles.SteppingButton {
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(Interactable), typeof(SpriteRenderer))]
     public class SteppingButton : MonoBehaviour
     {

@@ -2,6 +2,7 @@
 using UnityEngine;
 
 namespace UI {
+    [DisallowMultipleComponent]
     public class PlayerStatsUI : MonoBehaviour
     {
         [SceneObjectsOnly]

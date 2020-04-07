@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace Combat {
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(Collider2D))]
     public class CombatEntity : MonoBehaviour
     {
@@ -79,6 +80,8 @@ namespace Combat {
                 int maxHealth = combatStat.maxHealth;
                 int prevHealth = currentHealth;
                 currentHealth = Mathf.Max(0, Mathf.Min(maxHealth, value));
+
+                if (prevHealth == currentHealth) return; // don't invoke callbacks if the value did not change
 
                 onHealthChanged.Invoke(currentHealth, prevHealth, maxHealth);
 

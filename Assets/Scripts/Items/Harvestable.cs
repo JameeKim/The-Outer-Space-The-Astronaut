@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 namespace Items {
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(SpriteRenderer))]
     public class Harvestable : MonoBehaviour
     {

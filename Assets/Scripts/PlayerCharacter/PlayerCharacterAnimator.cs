@@ -2,6 +2,7 @@
 using UnityEngine;
 
 namespace PlayerCharacter {
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(Rigidbody2D))]
     public class PlayerCharacterAnimator : MonoBehaviour
     {

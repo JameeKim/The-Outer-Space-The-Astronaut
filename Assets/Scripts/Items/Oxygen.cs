@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 namespace Items {
+    [DisallowMultipleComponent]
     [RequireComponent(typeof(Interactable))]
     public class Oxygen : MonoBehaviour
     {

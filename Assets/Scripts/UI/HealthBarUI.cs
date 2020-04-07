@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI {
+    [DisallowMultipleComponent]
     public class HealthBarUI : MonoBehaviour
     {
         [SceneObjectsOnly]

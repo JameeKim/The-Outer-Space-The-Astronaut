@@ -35378,7 +35378,6 @@ GameObject:
   - component: {fileID: 723669728}
   - component: {fileID: 723669733}
   - component: {fileID: 723669732}
-  - component: {fileID: 723669734}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -35526,18 +35525,6 @@ MonoBehaviour:
   previousButtonText: {fileID: 1039835169}
   nextButtonText: {fileID: 1270849321}
 --- !u!114 &723669733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723669727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf90a76b9b97481cadab09811082e7cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &723669734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36389,6 +36376,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Previous
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868802095492796918, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868802095492796918, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868802095492796918, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868802095492796918, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 723669732}
+    - target: {fileID: 1868802095492796918, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowPrevious
+      objectReference: {fileID: 0}
+    - target: {fileID: 1868802095492796918, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1868802095492796920, guid: 3a10c455a52a23941ae3d52a9a3c0c94,
         type: 3}
