@@ -9,9 +9,6 @@ namespace UI {
         [Tooltip("The name of the stat shown in the UI")]
         public string statName = "Stat";
 
-        [Tooltip("The value of the stat")]
-        public int statValue = 999;
-
         [Title("Control Targets")]
         [Tooltip("The `Text` component of the stat name")]
         [SceneObjectsOnly]
@@ -23,21 +20,14 @@ namespace UI {
         [ValidateInput("MustBeSet")]
         public Text valueUI;
 
-        public void SetNewValue(int newValue)
+        public void SetNewValue(int newValue, int previousValue)
         {
-            statValue = newValue;
-            ApplyValue();
-        }
-
-        private void ApplyValue()
-        {
-            valueUI.text = statValue.ToString();
+            valueUI.text = newValue.ToString();
         }
 
         private void Start()
         {
             nameUI.text = statName;
-            ApplyValue();
         }
 
 #if UNITY_EDITOR
