@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Combat {
     [DisallowMultipleComponent]
-    [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
     public class CombatEntity : MonoBehaviour
     {
         [ValidateInput("MustBeSet")]
@@ -36,6 +36,8 @@ namespace Combat {
         [FoldoutGroup("Event Callbacks/Stat Changes")]
         [InfoBox("void OnDefenseChanged(int newDefense, int previousDefense)")]
         public OnStatChanged onDefenseChanged;
+
+        private Rigidbody2D rigidBody;
 
         #region CurrentCombatStats
 
@@ -122,6 +124,8 @@ namespace Combat {
 
         private void Start()
         {
+            rigidBody = GetComponent<Rigidbody2D>();
+
             InternalCurrentHealth = combatStat.maxHealth;
             InternalCurrentAttack = combatStat.attack;
             InternalCurrentDefense = combatStat.defense;
@@ -138,7 +142,7 @@ namespace Combat {
         {
             GameObject otherGameObject = other.gameObject;
 
-            if ((otherGameObject.layer & attackTargetLayer) == 0)
+            if ((1 << otherGameObject.layer & attackTargetLayer) == 0)
                 return; // return if the other game object is not in the layer
 
             CombatEntity otherCombatEntity = otherGameObject.GetComponent<CombatEntity>();
@@ -149,6 +153,7 @@ namespace Combat {
             // This method will be called on the other side (other `CombatEntity`), too.
             // Therefore, there is no need to call `GetAttacked` of the other one here.
             GetAttacked(otherCombatEntity.CurrentAttack);
+            rigidBody.AddForce(other.relativeVelocity.normalized * 5.0f, ForceMode2D.Impulse);
             onAttack.Invoke(other, this, otherCombatEntity);
         }
 

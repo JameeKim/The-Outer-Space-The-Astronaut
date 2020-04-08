@@ -31,28 +31,39 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: afee9dcc9e83d0447b771e8ed68a15e4, type: 3}
-    totalSpriteSurfaceArea: 50742
+    - {fileID: 102900000, guid: 9c5a0ec80b6ecb64bb9d6b695451397e, type: 3}
+    totalSpriteSurfaceArea: 68404
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: e6e0c0d02ee1712498d1bf6c1a2235bc, type: 3}
+  - {fileID: 21300000, guid: d1f2a701050dbad449ffb556568d6545, type: 3}
   - {fileID: 21300000, guid: ba8e7e136a5b3c04e8c960340adeaf2d, type: 3}
   - {fileID: 21300000, guid: 95fa1ba35ea01fa45b62638b0a8955d3, type: 3}
   - {fileID: 21300000, guid: 0068bbb7701972644bb791dd8bda6504, type: 3}
+  - {fileID: 21300000, guid: 98f4fac998d19904889b527fae8a16ee, type: 3}
+  - {fileID: 21300000, guid: 32b2731a3f8d0584f90338ee4a73b6e3, type: 3}
+  - {fileID: 21300000, guid: 2631cafb97e30c840bddd620a2792ca5, type: 3}
   - {fileID: 21300000, guid: 72a41aec8da519b45bd9bb58a5bb4fce, type: 3}
   - {fileID: 21300000, guid: 93e2260dc41b0464eb203bf549a204c9, type: 3}
   - {fileID: 21300000, guid: 27d2086d30d555945891fd40612f9a24, type: 3}
   - {fileID: 21300000, guid: df45856e0ad063e4abd6895316d0ac00, type: 3}
   - {fileID: 21300000, guid: f488ccee9cc4ecb4586fdd9bbef453d9, type: 3}
+  - {fileID: 21300000, guid: 1a0ee3bf9d67fb44ab792dfc619031a5, type: 3}
   m_PackedSpriteNamesToIndex:
   - alienYellow
+  - spider
   - alienYellow_walk1_flipped
   - alienYellow_hurt
   - alienYellow_walk1
+  - spider_dead
+  - spider_walk1
+  - spider_walk2
   - alienYellow_stand_flipped
   - alienYellow_walk2_flipped
   - alienYellow_stand
   - alienYellow_walk2
   - alienYellow_hurt_flipped
+  - spider_hit
   m_Tag: PlayerAndEnemies
   m_IsVariant: 0
