@@ -7,6 +7,9 @@ namespace Enemy {
     [RequireComponent(typeof(EnemyController))]
     public class Enemy : MonoBehaviour
     {
+        [SceneObjectsOnly]
+        public EnemyEmotes emotes;
+
         [AssetsOnly]
         public GameObject deadVersion;
 
