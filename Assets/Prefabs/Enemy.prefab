@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 2359505872333667010}
   - component: {fileID: 2359505872333667013}
   - component: {fileID: 2359505872333667033}
+  - component: {fileID: 5590295478313934139}
+  - component: {fileID: 7425753521393987394}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -275,7 +277,18 @@ MonoBehaviour:
     m_Bits: 512
   onAttack:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5590295478313934139}
+        m_MethodName: GetHurt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -315,8 +328,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   emotes: {fileID: 5134167290019396737}
-  deadVersion: {fileID: 2071243450579295500, guid: f768523db338a644e9ff3b938fe1ad7a,
+  deadVersion: {fileID: 8601361425961342433, guid: f065beacfc20c034884bce07920ee25f,
     type: 3}
+--- !u!114 &5590295478313934139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2359505872333667008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff725ae5acdd4cb3babc39e8e006f61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &7425753521393987394
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2359505872333667008}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67afd99e39ff3fe47bdda0214ee5bd6a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2359505872474495829
 GameObject:
   m_ObjectHideFlags: 0

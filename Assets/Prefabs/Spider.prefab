@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2359505872333667008, guid: 63dd2f441e7a5684e8a3eb0877929254,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Spider
       objectReference: {fileID: 0}
     - target: {fileID: 2359505872333667014, guid: 63dd2f441e7a5684e8a3eb0877929254,
         type: 3}
@@ -67,5 +67,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2359505872333667033, guid: 63dd2f441e7a5684e8a3eb0877929254,
+        type: 3}
+      propertyPath: deadVersion
+      value: 
+      objectReference: {fileID: 6429580594383885144, guid: f768523db338a644e9ff3b938fe1ad7a,
+        type: 3}
+    - target: {fileID: 7425753521393987394, guid: 63dd2f441e7a5684e8a3eb0877929254,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 28eee20530b92a444b3ca1e291261e59,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63dd2f441e7a5684e8a3eb0877929254, type: 3}
