@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Dialog {
     [DisallowMultipleComponent]
+    [RequireComponent(typeof(TimeController))]
     public class DialogPlayer : MonoBehaviour
     {
         [InfoBox("This component is meant to be used as a way to register a callback to play a dialog. "
@@ -12,6 +13,13 @@ namespace Dialog {
         [SceneObjectsOnly]
         [ValidateInput("MustBeSet")]
         public DialogPresenter dialogPresenter;
+
+        private TimeController timeController;
+
+        private void Start()
+        {
+            timeController = GetComponent<TimeController>();
+        }
 
         public void PlayDialog(DialogSeries dialogList)
         {
@@ -24,7 +32,7 @@ namespace Dialog {
         /// </summary>
         public void StartDialog()
         {
-            Time.timeScale = 0.0f;
+            timeController.SetTimeStop();
         }
 
         /// <summary>
@@ -32,7 +40,7 @@ namespace Dialog {
         /// </summary>
         public void EndDialog()
         {
-            Time.timeScale = 1.0f;
+            timeController.SetTimeNormal();
         }
 
 #if UNITY_EDITOR
