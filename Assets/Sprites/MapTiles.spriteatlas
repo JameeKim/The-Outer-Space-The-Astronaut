@@ -37,7 +37,8 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 2ae1433a5f5ef3f44aafee335f62f545, type: 3}
     - {fileID: 102900000, guid: abf734ed93f66eb4185a1c6a28adab1e, type: 3}
     - {fileID: 102900000, guid: d3c4f8efbf35c004783b11b03e0cbf61, type: 3}
-    totalSpriteSurfaceArea: 401408
+    - {fileID: 102900000, guid: 1c3bea7209b0254498971b650483942d, type: 3}
+    totalSpriteSurfaceArea: 506462
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -102,6 +103,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5038ee7964b70624a907dcf9cf5e4ab9, type: 3}
   - {fileID: 21300000, guid: 6057a5a9d57d5fd4c8c2ef0a9426a975, type: 3}
   - {fileID: 21300000, guid: dbaa9bb910b3e6345aeb2923eec01497, type: 3}
+  - {fileID: 21300000, guid: 409d670a37b08554fbff4e25e07b30d6, type: 3}
   - {fileID: 21300000, guid: e453741a079ab924790064bff1e0060f, type: 3}
   - {fileID: 21300000, guid: bbf712babc438ee49aab8e8ddd3e75df, type: 3}
   - {fileID: 21300000, guid: 7c9c1cbace36ade4b83a1e22a9e4b883, type: 3}
@@ -128,6 +130,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 68cd928d3450d70479a710a61835301f, type: 3}
   - {fileID: 21300000, guid: 5c2d9fdd0ed92ac4ea7b09168a963a17, type: 3}
   - {fileID: 21300000, guid: 3d47d04e3081cd54bb4ac217639835bb, type: 3}
+  - {fileID: 21300000, guid: 725a3e7ea0b3a9043b90a39dbe1f7f95, type: 3}
   - {fileID: 21300000, guid: ab6b3c9ecaf471a4a8953c2c58c9824a, type: 3}
   - {fileID: 21300000, guid: 1ca0f7ce55cba264584c6269e259a4bc, type: 3}
   - {fileID: 21300000, guid: aba139ceb6010f4479deac701c85ec90, type: 3}
@@ -201,6 +204,7 @@ SpriteAtlas:
   - grass_inner_bl
   - water_3
   - soil_outer_t
+  - spaceShips_005
   - rocky_inner_tr
   - crystal
   - rocky_outer_bl
@@ -227,6 +231,7 @@ SpriteAtlas:
   - tree_trunk
   - soil_inner_bl
   - desert_outer_t
+  - spaceParts_079
   - sand_outer_r
   - stone_gray
   - grass_outer_bl_jagged
