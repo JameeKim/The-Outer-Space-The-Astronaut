@@ -31,28 +31,78 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: afee9dcc9e83d0447b771e8ed68a15e4, type: 3}
-    totalSpriteSurfaceArea: 50742
+    - {fileID: 102900000, guid: 9c5a0ec80b6ecb64bb9d6b695451397e, type: 3}
+    - {fileID: 102900000, guid: 73988c98b7a6ecf4bb7d511cd70e1dab, type: 3}
+    totalSpriteSurfaceArea: 105206
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 0599680095c84cb4ba3f4a3e671abe7c, type: 3}
+  - {fileID: 21300000, guid: 962e6eb0e748fa745aa518d70037412c, type: 3}
   - {fileID: 21300000, guid: e6e0c0d02ee1712498d1bf6c1a2235bc, type: 3}
+  - {fileID: 21300000, guid: d1f2a701050dbad449ffb556568d6545, type: 3}
+  - {fileID: 21300000, guid: f01e594128b1f2742abec7e6325935f2, type: 3}
+  - {fileID: 21300000, guid: 763b7e915d2068d4e9e9e565bcf1d7e0, type: 3}
   - {fileID: 21300000, guid: ba8e7e136a5b3c04e8c960340adeaf2d, type: 3}
+  - {fileID: 21300000, guid: 6bb726a3dd0b37e42892799fd3a87ff8, type: 3}
   - {fileID: 21300000, guid: 95fa1ba35ea01fa45b62638b0a8955d3, type: 3}
+  - {fileID: 21300000, guid: 4649a6c3ea1af7a448a9d116556f72ad, type: 3}
+  - {fileID: 21300000, guid: c90ad40415fc01e44a534d7bde4c0ad9, type: 3}
+  - {fileID: 21300000, guid: 633876748e537c24dbf6e2436e23f885, type: 3}
+  - {fileID: 21300000, guid: a0e810a4fe1567941bd3530a6fb42ad9, type: 3}
+  - {fileID: 21300000, guid: c4d641d46d85bfb4aa2bde9f5732b60b, type: 3}
+  - {fileID: 21300000, guid: 4596524585dae5744aaf4a294d563c9c, type: 3}
+  - {fileID: 21300000, guid: 43d826f644e71a74ca512a896e970f76, type: 3}
+  - {fileID: 21300000, guid: 1b072777becb3b24ebf7306d5a9431b4, type: 3}
+  - {fileID: 21300000, guid: 3c2a6e77bb3245345b88c7484cf5e867, type: 3}
   - {fileID: 21300000, guid: 0068bbb7701972644bb791dd8bda6504, type: 3}
+  - {fileID: 21300000, guid: 629ba0b974c7ea945a2431f280ea478d, type: 3}
+  - {fileID: 21300000, guid: 98f4fac998d19904889b527fae8a16ee, type: 3}
+  - {fileID: 21300000, guid: 32b2731a3f8d0584f90338ee4a73b6e3, type: 3}
+  - {fileID: 21300000, guid: d604ef4a232d88149aa64b77fafc41ee, type: 3}
+  - {fileID: 21300000, guid: 2631cafb97e30c840bddd620a2792ca5, type: 3}
+  - {fileID: 21300000, guid: cbb1201ca1fbb634793baa97ab3cd75b, type: 3}
+  - {fileID: 21300000, guid: 3893a5dcc060c954d9ad3e787d741b2a, type: 3}
   - {fileID: 21300000, guid: 72a41aec8da519b45bd9bb58a5bb4fce, type: 3}
   - {fileID: 21300000, guid: 93e2260dc41b0464eb203bf549a204c9, type: 3}
   - {fileID: 21300000, guid: 27d2086d30d555945891fd40612f9a24, type: 3}
+  - {fileID: 21300000, guid: d631a91ed0a57cd47ab9e4e9d2ae41bb, type: 3}
   - {fileID: 21300000, guid: df45856e0ad063e4abd6895316d0ac00, type: 3}
   - {fileID: 21300000, guid: f488ccee9cc4ecb4586fdd9bbef453d9, type: 3}
+  - {fileID: 21300000, guid: 1a0ee3bf9d67fb44ab792dfc619031a5, type: 3}
   m_PackedSpriteNamesToIndex:
+  - emote_exclamation
+  - worm_hit_flipped
   - alienYellow
+  - spider
+  - spider_flipped
+  - worm
   - alienYellow_walk1_flipped
+  - spider_walk2_flipped
   - alienYellow_hurt
+  - spider_hit_flipped
+  - slime_hit
+  - worm_hit
+  - slime_dead
+  - slime_flipped
+  - slime_walk_flipped
+  - worm_walk
+  - worm_flipped
+  - slime_walk
   - alienYellow_walk1
+  - worm_walk_flipped
+  - spider_dead
+  - spider_walk1
+  - spider_walk1_flipped
+  - spider_walk2
+  - worm_dead
+  - emote_dots3
   - alienYellow_stand_flipped
   - alienYellow_walk2_flipped
   - alienYellow_stand
+  - slime
   - alienYellow_walk2
   - alienYellow_hurt_flipped
+  - spider_hit
   m_Tag: PlayerAndEnemies
   m_IsVariant: 0
