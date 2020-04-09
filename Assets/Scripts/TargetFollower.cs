@@ -59,4 +59,9 @@ public class TargetFollower : MonoBehaviour
             transformCache.position = targetPosition;
         }
     }
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
 }
