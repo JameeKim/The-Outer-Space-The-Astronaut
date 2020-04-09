@@ -152,8 +152,8 @@ namespace Combat {
 
             // This method will be called on the other side (other `CombatEntity`), too.
             // Therefore, there is no need to call `GetAttacked` of the other one here.
-            GetAttacked(otherCombatEntity.CurrentAttack);
             rigidBody.AddForce(other.relativeVelocity.normalized * 5.0f, ForceMode2D.Impulse);
+            GetAttacked(otherCombatEntity.CurrentAttack);
             onAttack.Invoke(other, this, otherCombatEntity);
         }
 

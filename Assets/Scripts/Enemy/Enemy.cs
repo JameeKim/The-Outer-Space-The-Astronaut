@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Enemy {
     [DisallowMultipleComponent]
-    [RequireComponent(typeof(EnemyController))]
+    [RequireComponent(typeof(EnemyController), typeof(Rigidbody2D))]
     public class Enemy : MonoBehaviour
     {
         [SceneObjectsOnly]
@@ -14,6 +14,7 @@ namespace Enemy {
         public GameObject deadVersion;
 
         private EnemyController enemyController;
+        private Rigidbody2D rigidBody;
 
         private readonly EnemyTargetEvent onPlayerEnter = new EnemyTargetEvent();
         private readonly EnemyTargetEvent onPlayerExit = new EnemyTargetEvent();
@@ -35,6 +36,7 @@ namespace Enemy {
         private void Start()
         {
             enemyController = GetComponent<EnemyController>();
+            rigidBody = GetComponent<Rigidbody2D>();
         }
 
         public void OnPlayerEnter(GameObject player)
@@ -50,7 +52,8 @@ namespace Enemy {
         public void OnDeath()
         {
             onDeath.Invoke(ID);
-            Instantiate(deadVersion, transform.position, Quaternion.identity);
+            GameObject newGameObject = Instantiate(deadVersion, transform.position, Quaternion.identity);
+            newGameObject.GetComponent<Rigidbody2D>().velocity = rigidBody.velocity;
             Destroy(gameObject);
         }
 
