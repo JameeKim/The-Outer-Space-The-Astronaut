@@ -12,6 +12,8 @@ namespace SpaceShip {
 
         public LevelUpEvent onLevelUp;
 
+        public PlayerRideEvent onPlayerRide;
+
         private int currentLevel;
 
         public int CurrentLevel => currentLevel;
@@ -39,10 +41,13 @@ namespace SpaceShip {
             if (currentLevel < settings.MaxLevel)
                 return;
 
-            Debug.Log("The game should end here"); // TODO play game finished scene
+            onPlayerRide.Invoke(player);
         }
 
         [Serializable]
         public class LevelUpEvent : UnityEvent<int> {}
+
+        [Serializable]
+        public class PlayerRideEvent : UnityEvent<GameObject> {}
     }
 }
