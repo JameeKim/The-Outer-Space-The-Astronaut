@@ -127,6 +127,17 @@ namespace Combat {
             InternalCurrentHealth = currentHealth - rawDamage;
         }
 
+        public void GetPowerUp(string type, int value)
+        {
+            if(type == "Oxygen")
+            {
+                InternalCurrentHealth = currentHealth + value;
+            } else if(type == "Caffeine") {
+                InternalCurrentAttack = currentAttack + value;
+                InternalCurrentDefense = currentDefense + value;
+            }
+        }
+
         private void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>();
