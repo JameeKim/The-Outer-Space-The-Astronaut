@@ -135,6 +135,9 @@ namespace Combat {
             } else if(type == "Caffeine") {
                 InternalCurrentAttack = currentAttack + value;
                 InternalCurrentDefense = currentDefense + value;
+            } else if(type == "DecreasePower") {
+                InternalCurrentAttack = currentAttack - value;
+                InternalCurrentDefense = currentDefense - value;
             }
         }
 
