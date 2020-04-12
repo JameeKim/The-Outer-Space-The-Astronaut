@@ -20,7 +20,7 @@ namespace Puzzles.SteppingButton {
 
         private int nextCorrectOrder = 0;
 
-        private void Start()
+        private void Awake()
         {
             for (int i = 0; i < buttons.Length; i++)
             {
