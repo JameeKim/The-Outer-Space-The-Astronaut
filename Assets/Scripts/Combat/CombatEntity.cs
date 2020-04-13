@@ -122,7 +122,7 @@ namespace Combat {
             InternalCurrentHealth = currentHealth - (rawDamage - currentDefense);
         }
 
-        public void DecreasePlayerHealth(int hpDecreasingValue)
+        public void DecreaseHealth(int hpDecreasingValue)
         {
             InternalCurrentHealth = currentHealth - hpDecreasingValue;
         }

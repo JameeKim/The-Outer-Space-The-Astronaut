@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(CombatEntity))]
 public class PlayerHPDecreasement : MonoBehaviour
 {
-    [SerializeField] public int hpDecreasingValue = 1;
-    [SerializeField] public float decreasingInterval = 1.0f;
+    public int hpDecreasingValue = 1;
+    public float decreasingInterval = 1.0f;
 
     private CombatEntity combatEntity;
 
