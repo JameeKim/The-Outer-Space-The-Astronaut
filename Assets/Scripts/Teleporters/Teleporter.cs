@@ -3,13 +3,20 @@ using UnityEngine;
 
 namespace Teleporters {
     [DisallowMultipleComponent]
-    [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(Collider2D), typeof(AudioSource))]
     public class Teleporter : MonoBehaviour
     {
         [HideInPrefabAssets]
         [SceneObjectsOnly]
         [ValidateInput("MustBeSet")]
         public Teleporter destination;
+
+        private AudioSource audioSource;
+
+        private void Awake()
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -23,6 +30,7 @@ namespace Teleporters {
 
             entity.SetSent();
             entity.RigidBody.position += (Vector2) (destination.transform.position - transform.position);
+            audioSource.Play();
         }
 
 #if UNITY_EDITOR
