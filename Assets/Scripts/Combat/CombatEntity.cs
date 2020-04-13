@@ -124,7 +124,7 @@ namespace Combat {
 
         public void ChangeCombatStat(CombatStatType type, int amount)
         {
-            switch(type)
+            switch (type)
             {
                 case CombatStatType.HealthPoint:
                     InternalCurrentHealth = currentHealth + amount;
@@ -134,6 +134,11 @@ namespace Combat {
                     InternalCurrentDefense = currentDefense + amount;
                     break;
             }
+        }
+
+        public void DecreaseHealth(int hpDecreasingValue)
+        {
+            InternalCurrentHealth = currentHealth - hpDecreasingValue;
         }
 
         private void Start()
