@@ -29,6 +29,8 @@ namespace PlayerCharacter {
 
             Vector2 direction= new Vector2(horiz, vert).normalized;
             rigidBody.AddForce(direction * acceleration);
+
+            //controller.DisableInputForSeconds(paralyzeDuration); // disable input for stalling effect
         }
 
         public void DisableInputForSeconds(float seconds)

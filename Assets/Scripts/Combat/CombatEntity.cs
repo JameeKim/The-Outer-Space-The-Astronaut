@@ -122,6 +122,11 @@ namespace Combat {
             InternalCurrentHealth = currentHealth - (rawDamage - currentDefense);
         }
 
+        public void DecreaseHealth(int hpDecreasingValue)
+        {
+            InternalCurrentHealth = currentHealth - hpDecreasingValue;
+        }
+
         private void Start()
         {
             rigidBody = GetComponent<Rigidbody2D>();
