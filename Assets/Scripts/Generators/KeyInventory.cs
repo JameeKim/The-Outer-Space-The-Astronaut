@@ -25,7 +25,7 @@ namespace Generators {
 
             unlockedGenerators.Add(newKey.generator);
             GameObject ui = Instantiate(keyUIPrefab, keyInventoryUI, false);
-            ui.GetComponent<Image>().sprite = newKey.SpriteRenderer.sprite;
+            ui.GetComponent<Image>().sprite = newKey.Sprite;
             newKey.generator.SetKeyUI(ui);
         }
 

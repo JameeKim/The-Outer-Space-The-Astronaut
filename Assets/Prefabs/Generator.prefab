@@ -165,6 +165,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &850517961105581348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656580000041051821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6fff0a1bc1407792a788e6c13b2a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerCollide:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 656580000041051819}
+        m_MethodName: OnPlayerCollide
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &3056714980354597686
 AudioSource:
   m_ObjectHideFlags: 0
@@ -174,7 +200,7 @@ AudioSource:
   m_GameObject: {fileID: 656580000041051821}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 1475924789986894226, guid: 0407f6ebaf572a046a2342da9a3db53f,
+  OutputAudioMixerGroup: {fileID: -8494565542554138948, guid: b601ea1f80745874f942678784eca510,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 3761f51b9422bd5438d4d1458f42b06b, type: 3}
   m_PlayOnAwake: 0
@@ -280,32 +306,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &850517961105581348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656580000041051821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e6fff0a1bc1407792a788e6c13b2a68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onPlayerCollide:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 656580000041051819}
-        m_MethodName: OnPlayerCollide
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &4875974442059429372
 GameObject:
   m_ObjectHideFlags: 0

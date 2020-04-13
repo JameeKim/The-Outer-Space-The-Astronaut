@@ -21,7 +21,7 @@ namespace Items {
         private float timeLeftUntilRegen;
 
         [Title("Properties")]
-        [Min(1.0f)]
+        [Min(0.0f)]
         [Tooltip("How many seconds it needs to be regenerated")]
         public float spawnTime = 60.0f;
 
