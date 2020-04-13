@@ -17,5 +17,10 @@ namespace Puzzles.SteppingButton {
         public Color normalTintColor = Color.white;
         public Color wrongTintColor = Color.red;
         public Color validTintColor = Color.green;
+
+        [Title("Sounds")]
+        public AudioClip correctSound;
+        public AudioClip wrongSound;
+        public AudioClip solvedSound;
     }
 }

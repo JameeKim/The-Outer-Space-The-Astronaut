@@ -12,9 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beabaed06e4cd794c8a7b0557ea9c2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: b758a81d3b4bb944798b2410c353a69a, type: 2}
-  isActive: 1
-  steppingOrder: 0
 --- !u!1001 &7145061367324725640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22,6 +19,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1305790254505852672, guid: 99fcf9993ddbdc64397b660e5989ee09,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -3404605577362218791, guid: b9c7beeb67f8bf249b84d56c96d18469,
+        type: 2}
     - target: {fileID: 8421076916468737712, guid: 99fcf9993ddbdc64397b660e5989ee09,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size
