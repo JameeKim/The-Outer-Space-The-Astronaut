@@ -39,7 +39,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: d3c4f8efbf35c004783b11b03e0cbf61, type: 3}
     - {fileID: 102900000, guid: 1c3bea7209b0254498971b650483942d, type: 3}
     - {fileID: 102900000, guid: dcf4f13d829b98445a2808be10bde47c, type: 3}
-    totalSpriteSurfaceArea: 563806
+    totalSpriteSurfaceArea: 567902
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -68,6 +68,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 86302fc3de9c25f42b163106bbf71ce5, type: 3}
   - {fileID: 21300000, guid: 5ebc21d38ec358e4fb34c1dfa007659e, type: 3}
   - {fileID: 21300000, guid: e99765d36412d754f8e0af51c11580ac, type: 3}
+  - {fileID: 21300000, guid: f7a113e351a3784479480160d3e7c039, type: 3}
   - {fileID: 21300000, guid: 29a333844f361e74cb8c16e8436793ab, type: 3}
   - {fileID: 21300000, guid: 6e87b8c4c162a464abd04bcb428a2bee, type: 3}
   - {fileID: 21300000, guid: 50757cf493146004aa548483f3481d60, type: 3}
@@ -177,6 +178,7 @@ SpriteAtlas:
   - sand_inner_tl
   - grass_outer_br_jagged
   - grass_inner_br
+  - teleporter
   - desert_outer_l
   - tree_purple
   - rocky_outer_br_jagged
