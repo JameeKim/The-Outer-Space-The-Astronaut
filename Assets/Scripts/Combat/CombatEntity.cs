@@ -123,7 +123,7 @@ namespace Combat {
         /// <param name="rawDamage">The attack value of the attacker</param>
         public void GetAttacked(int rawDamage)
         {
-            InternalCurrentHealth = currentHealth - (rawDamage - currentDefense);
+            InternalCurrentHealth = currentHealth - Mathf.Max(0, rawDamage - currentDefense);
             onHurt.Invoke();
         }
 
