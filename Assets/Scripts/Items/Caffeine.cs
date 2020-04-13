@@ -6,7 +6,7 @@ namespace Items {
     [RequireComponent(typeof(Interactable))]
     public class Caffeine : MonoBehaviour
     {
-        [SerializeField] public int enhancedValue = 1;
+        public int enhancedValue = 1;
         public void OnConsume(GameObject player)
         {
             //Debug.Log("Player consumed a caffeine");

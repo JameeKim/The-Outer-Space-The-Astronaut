@@ -6,7 +6,7 @@ namespace Items {
     [RequireComponent(typeof(Interactable))]
     public class Oxygen : MonoBehaviour
     {
-        [SerializeField] public int healingValue = 10;
+        public int healingValue = 10;
 
         public void OnConsume(GameObject player)
         {
