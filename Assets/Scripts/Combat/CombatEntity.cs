@@ -122,6 +122,20 @@ namespace Combat {
             InternalCurrentHealth = currentHealth - (rawDamage - currentDefense);
         }
 
+        public void ChangeCombatStat(CombatStatType type, int amount)
+        {
+            switch (type)
+            {
+                case CombatStatType.HealthPoint:
+                    InternalCurrentHealth = currentHealth + amount;
+                    break;
+                case CombatStatType.CombatPoint:
+                    InternalCurrentAttack = currentAttack + amount;
+                    InternalCurrentDefense = currentDefense + amount;
+                    break;
+            }
+        }
+
         public void DecreaseHealth(int hpDecreasingValue)
         {
             InternalCurrentHealth = currentHealth - hpDecreasingValue;
