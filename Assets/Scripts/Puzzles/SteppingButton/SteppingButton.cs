@@ -16,8 +16,7 @@ namespace Puzzles.SteppingButton {
         public SteppingButtonSettings Settings { get; set; }
         public int SteppingOrder { get; set; }
 
-        // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.color = Settings.normalTintColor;
