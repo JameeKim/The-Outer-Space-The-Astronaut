@@ -6,6 +6,9 @@ namespace Generators {
     public class Generator : MonoBehaviour
     {
         [SceneObjectsOnly]
+        public AudioSource unlockSoundPlayer;
+
+        [SceneObjectsOnly]
         public GameObject puzzle;
 
         [SceneObjectsOnly]
@@ -29,6 +32,9 @@ namespace Generators {
                 Destroy(keyUI);
                 keyUI = null;
             }
+
+            if (unlockSoundPlayer != null)
+                unlockSoundPlayer.Play();
 
             if (puzzle == null)
                 Activate(); // activate if it does not have a puzzle associated with it

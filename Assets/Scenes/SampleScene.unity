@@ -35801,6 +35801,11 @@ PrefabInstance:
       propertyPath: onHarvest.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Generators.Key, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4310485178365995941, guid: 3094e21a4010e424d81c32108b925afd,
+        type: 3}
+      propertyPath: onHarvest.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1918426299}
     - target: {fileID: 6729251821403436176, guid: 3094e21a4010e424d81c32108b925afd,
         type: 3}
       propertyPath: m_Sprite
@@ -40467,7 +40472,7 @@ AudioSource:
   m_GameObject: {fileID: 1398157388}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6436748785842761800, guid: 0407f6ebaf572a046a2342da9a3db53f,
+  OutputAudioMixerGroup: {fileID: -1281960308056251081, guid: 5eb755c923c2e274eb8ac9e666828853,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 1f3050799036f11458e7fc349d23d6fa, type: 3}
   m_PlayOnAwake: 1
@@ -42363,6 +42368,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1912094542}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1918426299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -6260187310717254884, guid: 3094e21a4010e424d81c32108b925afd,
+    type: 3}
+  m_PrefabInstance: {fileID: 683345746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09ba86d4710f491baf9a0bd7e86e8ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1921568580
 PrefabInstance:
   m_ObjectHideFlags: 0
