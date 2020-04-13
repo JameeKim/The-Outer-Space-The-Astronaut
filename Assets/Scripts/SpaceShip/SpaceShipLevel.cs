@@ -18,12 +18,6 @@ namespace SpaceShip {
 
         public int CurrentLevel => currentLevel;
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-                LevelUp();
-        }
-
         public void LevelUp()
         {
             if (currentLevel == settings.MaxLevel)
