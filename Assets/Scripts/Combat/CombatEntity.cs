@@ -21,6 +21,10 @@ namespace Combat {
             + "\tCombatEntity collisionTarget)")]
         public OnAttack onAttack;
 
+        [FoldoutGroup("Event Callbacks/Attack")]
+        [InfoBox("void OnHurt()")]
+        public UnityEvent onHurt;
+
         [FoldoutGroup("Event Callbacks/Health")]
         [InfoBox("void OnHealthChanged(int newHealth, int previousHealth, int maxHealth)")]
         public OnHealthChanged onHealthChanged;
@@ -120,6 +124,7 @@ namespace Combat {
         public void GetAttacked(int rawDamage)
         {
             InternalCurrentHealth = currentHealth - (rawDamage - currentDefense);
+            onHurt.Invoke();
         }
 
         public void ChangeCombatStat(CombatStatType type, int amount)

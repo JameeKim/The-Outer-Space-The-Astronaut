@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 namespace Puzzles.SteppingButton {
     [DisallowMultipleComponent]
+    [RequireComponent(typeof(AudioSource))]
     public class SteppingButtonManager : MonoBehaviour
     {
         [InlineEditor(InlineEditorObjectFieldModes.Hidden)]
@@ -18,10 +19,14 @@ namespace Puzzles.SteppingButton {
         [Space(5.0f)]
         public UnityEvent onSolved;
 
+        private AudioSource audioSource;
+
         private int nextCorrectOrder = 0;
 
         private void Awake()
         {
+            audioSource = GetComponent<AudioSource>();
+
             for (int i = 0; i < buttons.Length; i++)
             {
                 buttons[i].Settings = settings;
@@ -43,6 +48,7 @@ namespace Puzzles.SteppingButton {
             {
                 // rewards of solving the puzzle
                 Debug.Log("Congratulation. Puzzle is solved. Go forward.");
+                audioSource.PlayOneShot(settings.solvedSound);
                 onSolved.Invoke();
             }
         }

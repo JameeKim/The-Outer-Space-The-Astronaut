@@ -10,11 +10,11 @@ namespace Generators {
         [ValidateInput("MustBeSet")]
         public Generator generator;
 
-        public SpriteRenderer SpriteRenderer { get; private set; }
+        public Sprite Sprite { get; private set; }
 
         private void Awake()
         {
-            SpriteRenderer = GetComponent<SpriteRenderer>();
+            Sprite = GetComponent<SpriteRenderer>().sprite;
         }
 
 #if UNITY_EDITOR

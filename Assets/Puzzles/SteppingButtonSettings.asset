@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02cbbbf93be4b9b8e3778a9a292cabc, type: 3}
   m_Name: SteppingButtonSettings
   m_EditorClassIdentifier: 
+  showWrongDuration: 1
+  resetAllWhenWrong: 1
   normalTintColor: {r: 1, g: 1, b: 1, a: 1}
   wrongTintColor: {r: 1, g: 0, b: 0, a: 1}
   validTintColor: {r: 0, g: 1, b: 0, a: 1}
+  correctSound: {fileID: 8300000, guid: 0d3ed2c8648e08144837165db6263fef, type: 3}
+  wrongSound: {fileID: 8300000, guid: 89a4266158dbd8146b7840bca89ca69f, type: 3}
+  solvedSound: {fileID: 8300000, guid: 9fe129e3445facd41a09f4e46edab76a, type: 3}
