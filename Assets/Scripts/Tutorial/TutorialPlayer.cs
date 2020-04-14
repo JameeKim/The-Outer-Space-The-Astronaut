@@ -51,10 +51,18 @@ namespace Tutorial {
                 return;
 
             Destroy(tutorialTriggers[index].gameObject);
-            tutorialTriggers.RemoveAt(index);
+            tutorialTriggers = tutorialTriggers.RemoveAt(index);
 
             if (tutorialTriggers.Length == 0)
+            {
                 IsFinished = true;
+                return;
+            }
+
+            foreach (TutorialBoundary boundary in tutorialTriggers[0].GetComponentsInChildren<TutorialBoundary>())
+            {
+                boundary.SetDetectionEnabled(true);
+            }
         }
     }
 }

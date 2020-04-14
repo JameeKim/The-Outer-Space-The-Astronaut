@@ -10,27 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e24b27e4754629875c4e7bfa7eb232, type: 3}
-  m_Name: FirstOxygenDialog
+  m_Name: AlienFound
   m_EditorClassIdentifier: 
   isTutorial: 1
   dialogItems:
   - defaultName: 1
     speakerName: 
-    content: Hey, this is solid oxygen! This is great!
+    content: Oh look, there is living organism here!
   - defaultName: 1
     speakerName: 
-    content: I have limited amount of oxygen in my portable tank.
+    content: They seem to be hostile and will start to attack when I get close.
   - defaultName: 1
     speakerName: 
-    content: As time goes, I will use it up, so the level will gradually decrease.
+    content: My oxygen will leak out if I get attacked.
   - defaultName: 1
     speakerName: 
-    content: If the oxygen level on the top left corner falls to zero, I will fail
-      to survive.
+    content: I can attack back when they come to me to attack.
   - defaultName: 1
     speakerName: 
-    content: Since there are crystals of solid oxygen on this planet, I can at least
-      survive here!
-  - defaultName: 1
-    speakerName: 
-    content: I wonder if this grows back, though.
+    content: Let's give it a try.

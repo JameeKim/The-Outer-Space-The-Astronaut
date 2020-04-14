@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3c8f78b744443a6947574b37fc10ac1, type: 3}
-  m_Name: TutorialSettings
+  m_Script: {fileID: 11500000, guid: f71b64d75093464cbc0e086266dcd85e, type: 3}
+  m_Name: 06-FirstCaffeine
   m_EditorClassIdentifier: 
-  goBackDuration: 0.3
+  dialogList: {fileID: 11400000, guid: 671bacfb577a23c46aaa6f66bb646b5d, type: 2}

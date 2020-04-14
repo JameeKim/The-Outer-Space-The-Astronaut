@@ -16,6 +16,19 @@ namespace Tutorial {
         [HideInPrefabAssets]
         public DialogPlayer dialogPlayer;
 
+        private void Awake()
+        {
+            SetDetectionEnabled(false);
+        }
+
+        public void SetDetectionEnabled(bool enabledValue)
+        {
+            foreach (Collider2D component in GetComponents<Collider2D>())
+            {
+                component.enabled = enabledValue;
+            }
+        }
+
         public void OnPlayerEnter(GameObject player)
         {
             PlayerCharacterController playerController = player.GetComponent<PlayerCharacterController>();
