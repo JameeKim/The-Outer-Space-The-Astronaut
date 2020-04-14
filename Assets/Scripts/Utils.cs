@@ -16,4 +16,15 @@ public static class Utils
 
         return dest;
     }
+
+    public static T[] Add<T>(this T[] source, T newItem)
+    {
+        int length = source.Length;
+
+        T[] dest = new T[length + 1];
+        Array.Copy(source, dest, length);
+        dest[length] = newItem;
+
+        return dest;
+    }
 }

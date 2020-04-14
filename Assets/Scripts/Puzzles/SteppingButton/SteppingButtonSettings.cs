@@ -2,7 +2,6 @@
 using UnityEngine;
 
 namespace Puzzles.SteppingButton {
-    [CreateAssetMenu(fileName = "SteppingButtonSettings", menuName = "New Stepping Button Settings", order = 5)]
     public class SteppingButtonSettings : ScriptableObject
     {
         [Title("Answer")]

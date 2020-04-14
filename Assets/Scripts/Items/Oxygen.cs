@@ -2,13 +2,11 @@
 using UnityEngine;
 
 namespace Items {
-    [DisallowMultipleComponent]
-    [RequireComponent(typeof(Interactable))]
-    public class Oxygen : MonoBehaviour
+    public class Oxygen : Consumable
     {
         public int healingValue = 10;
 
-        public void OnConsume(GameObject player)
+        protected override void Consume(GameObject player)
         {
             //Debug.Log("Player consumed an oxygen crystal");
             CombatEntity combatEntity = player.GetComponent<CombatEntity>();

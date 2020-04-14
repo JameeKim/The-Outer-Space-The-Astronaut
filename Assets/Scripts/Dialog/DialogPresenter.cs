@@ -1,6 +1,8 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Dialog {
@@ -12,9 +14,9 @@ namespace Dialog {
 
         public string endString = "Quit";
 
-        public UnityEvent onDialogStart;
+        public DialogEvent onDialogStart;
 
-        public UnityEvent onDialogEnd;
+        public DialogEvent onDialogEnd;
 
         [Title("Control Targets")]
         [SceneObjectsOnly]
@@ -38,8 +40,16 @@ namespace Dialog {
         public Text previousButtonText;
 
         [SceneObjectsOnly]
+        [ValidateInput("ButtonMustBeSet")]
+        public Button nextButton;
+
+        [SceneObjectsOnly]
         [ValidateInput("TextMustBeSet")]
         public Text nextButtonText;
+
+        [SceneObjectsOnly]
+        [ValidateInput("GameObjectMustBeSet")]
+        public GameObject skipTutorial;
 
         private DialogSeries dialogList;
         private int dialogLength;
@@ -56,7 +66,8 @@ namespace Dialog {
             dialogList = dialogSeries;
             dialogLength = dialogList.dialogItems.Length;
             index = 0;
-            onDialogStart.Invoke();
+            skipTutorial.SetActive(dialogList.isTutorial);
+            onDialogStart.Invoke(dialogList);
             ShowDialog("StartDialog");
         }
 
@@ -99,12 +110,13 @@ namespace Dialog {
             dialogContentText.text = dialogItem.content; // set content
             nextButtonText.text = index == dialogLength - 1 ? endString : nextString; // set text of next button
             SetPreviousButtonActive(index != 0); // show or hide previous button
+            SetButtonFocus(index != 0);
         }
 
-        private void FinishDialog()
+        public void FinishDialog()
         {
+            onDialogEnd.Invoke(dialogList);
             dialogList = null;
-            onDialogEnd.Invoke();
         }
 
         private void SetPreviousButtonActive(bool active)
@@ -114,40 +126,26 @@ namespace Dialog {
             previousButtonText.enabled = active;
         }
 
+        private void SetButtonFocus(bool isPreviousButtonActive)
+        {
+            if (!isPreviousButtonActive)
+                EventSystem.current.SetSelectedGameObject(nextButton.gameObject);
+        }
+
+        [Serializable]
+        public class DialogEvent : UnityEvent<DialogSeries> {}
+
 #if UNITY_EDITOR
-        private bool TextMustBeSet(Text variable, ref string errorMsg)
+        private bool TextMustBeSet(Text value, ref string msg) => MustBeSet(value, ref msg);
+        private bool ButtonMustBeSet(Button value, ref string msg) => MustBeSet(value, ref msg);
+        private bool ImageMustBeSet(Image value, ref string msg) => MustBeSet(value, ref msg);
+        private bool GameObjectMustBeSet(GameObject value, ref string msg) => MustBeSet(value, ref msg);
+
+        private static bool MustBeSet<T>(T value, ref string msg) where T : class
         {
-            bool isValid = variable != null;
-
+            bool isValid = value != null;
             if (!isValid)
-            {
-                errorMsg = "The field must be set to a non-null value";
-            }
-
-            return isValid;
-        }
-
-        private bool ButtonMustBeSet(Button variable, ref string errorMsg)
-        {
-            bool isValid = variable != null;
-
-            if (!isValid)
-            {
-                errorMsg = "The field must be set to a non-null value";
-            }
-
-            return isValid;
-        }
-
-        private bool ImageMustBeSet(Image variable, ref string errorMsg)
-        {
-            bool isValid = variable != null;
-
-            if (!isValid)
-            {
-                errorMsg = "The field must be set to a non-null value";
-            }
-
+                msg = "The field must be set to a non-null value";
             return isValid;
         }
 #endif

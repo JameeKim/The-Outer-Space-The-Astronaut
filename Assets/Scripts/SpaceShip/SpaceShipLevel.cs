@@ -12,6 +12,8 @@ namespace SpaceShip {
 
         public LevelUpEvent onLevelUp;
 
+        public UnityEvent onPlayerTryToRide;
+
         public PlayerRideEvent onPlayerRide;
 
         private int currentLevel;
@@ -33,9 +35,9 @@ namespace SpaceShip {
         public void OnPlayerCollide(GameObject player)
         {
             if (currentLevel < settings.MaxLevel)
-                return;
-
-            onPlayerRide.Invoke(player);
+                onPlayerTryToRide.Invoke();
+            else
+                onPlayerRide.Invoke(player);
         }
 
         [Serializable]

@@ -12,7 +12,9 @@ namespace PlayerCharacter {
         private Rigidbody2D rigidBody;
 
         private bool disabled;
-        private Coroutine currentCoroutine;
+        private bool forcedMove;
+        private Vector2 forcedMoveDirection;
+        private Coroutine disableInputCoroutine;
 
         private void Start()
         {
@@ -24,29 +26,46 @@ namespace PlayerCharacter {
             if (disabled)
                 return;
 
-            float horiz = Input.GetAxisRaw("Horizontal");
-            float vert = Input.GetAxisRaw("Vertical");
+            Vector2 direction = forcedMove
+                ? forcedMoveDirection
+                : new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
-            Vector2 direction= new Vector2(horiz, vert).normalized;
             rigidBody.AddForce(direction * acceleration);
-
-            //controller.DisableInputForSeconds(paralyzeDuration); // disable input for stalling effect
         }
 
         public void DisableInputForSeconds(float seconds)
         {
-            if (currentCoroutine != null)
-                StopCoroutine(currentCoroutine);
+            if (disableInputCoroutine != null)
+                StopCoroutine(disableInputCoroutine);
 
-            currentCoroutine = StartCoroutine(DisableInputCoroutine(seconds));
+            disableInputCoroutine = StartCoroutine(DisableInputCoroutine(seconds));
+        }
+
+        public void DisableInputAndMoveForSeconds(float seconds, Vector2 direction)
+        {
+            if (disableInputCoroutine != null)
+                StopCoroutine(disableInputCoroutine);
+
+            disableInputCoroutine = StartCoroutine(DisableInputAndMoveCoroutine(seconds, direction));
         }
 
         private IEnumerator DisableInputCoroutine(float seconds)
         {
             disabled = true;
+            forcedMove = false;
             yield return new WaitForSeconds(seconds);
             disabled = false;
-            currentCoroutine = null;
+            disableInputCoroutine = null;
+        }
+
+        private IEnumerator DisableInputAndMoveCoroutine(float seconds, Vector2 direction)
+        {
+            disabled = false;
+            forcedMove = true;
+            forcedMoveDirection = direction.normalized;
+            yield return new WaitForSeconds(seconds);
+            forcedMove = false;
+            disableInputCoroutine = null;
         }
     }
 }
