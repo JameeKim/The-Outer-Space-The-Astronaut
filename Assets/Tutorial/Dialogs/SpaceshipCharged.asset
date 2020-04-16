@@ -10,19 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2e24b27e4754629875c4e7bfa7eb232, type: 3}
-  m_Name: FirstCaffeine
+  m_Name: SpaceshipCharged
   m_EditorClassIdentifier: 
   isTutorial: 1
   dialogItems:
   - defaultName: 1
     speakerName: 
-    content: This consists of caffeine! I feel more powerful now.
+    content: Oh look, the color on the spaceship has changed to orange!
   - defaultName: 1
     speakerName: 
-    content: I can now deal more damage and take less damage from the aliens.
+    content: That means the power has been charged partially.
   - defaultName: 1
     speakerName: 
-    content: My attack and defense stats are shown at the top right corner.
+    content: It seems like the structure I activated indeed produced electricity!
   - defaultName: 1
     speakerName: 
-    content: Now I should keep exploring. Let's go left.
+    content: If I find two more of them and activate them, I should be able to fully
+      charge the spaceship and return home.
+  - defaultName: 1
+    speakerName: 
+    content: Let's give it a shot! (The tutorial ends here.)

@@ -139,10 +139,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed51c603b20842c48873143579f39547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockSound: {fileID: 8300000, guid: 4ca41e652bb547645988ad8ad602f752, type: 3}
   unlockSoundPlayer: {fileID: 328794323744630235}
   puzzle: {fileID: 0}
   inventory: {fileID: 0}
+  onTryUnlock:
+    m_PersistentCalls:
+      m_Calls: []
+  onUnlocked:
+    m_PersistentCalls:
+      m_Calls: []
   onActivated:
     m_PersistentCalls:
       m_Calls:

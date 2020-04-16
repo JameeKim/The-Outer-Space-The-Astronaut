@@ -28,6 +28,11 @@ namespace Tutorial {
         private void Awake()
         {
             tutorialTriggers = tutorialGameObject.GetComponentsInChildren<TutorialTrigger>();
+
+            for (int i = 1; i < tutorialTriggers.Length; i++)
+            {
+                SetTriggerColliderActive(tutorialTriggers[i], false);
+            }
         }
 
         public void SkipTutorial()
@@ -59,10 +64,19 @@ namespace Tutorial {
                 return;
             }
 
+            SetTriggerColliderActive(tutorialTriggers[0], true);
+
             foreach (TutorialBoundary boundary in tutorialTriggers[0].GetComponentsInChildren<TutorialBoundary>())
             {
                 boundary.SetDetectionEnabled(true);
             }
+        }
+
+        private static void SetTriggerColliderActive(TutorialTrigger trigger, bool active)
+        {
+            Collider2D triggerCollider = trigger.GetComponent<Collider2D>();
+            if (triggerCollider != null)
+                triggerCollider.enabled = active;
         }
     }
 }
