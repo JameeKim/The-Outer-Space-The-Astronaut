@@ -17,3 +17,6 @@ MonoBehaviour:
   - defaultName: 1
     speakerName: 
     content: I made it! Now it's time to go back home.
+  - defaultName: 1
+    speakerName: 
+    content: Here we go!
