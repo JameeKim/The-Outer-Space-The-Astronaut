@@ -38,35 +38,43 @@ namespace Puzzles.SteppingButton {
 
         private void OnButtonPressed(SteppingButton button)
         {
-            if (nextCorrectOrder >= buttons.Length) return;
+            if (nextCorrectOrder >= buttons.Length)
+                return;
 
             bool isCorrect = button.SteppingOrder == nextCorrectOrder;
-            button.SetStatus(isCorrect);
-            if (isCorrect) nextCorrectOrder++;
 
-            if (nextCorrectOrder == buttons.Length)
+            if (!isCorrect && settings.resetAllWhenWrong)
             {
-                // rewards of solving the puzzle
-                Debug.Log("Congratulation. Puzzle is solved. Go forward.");
-                audioSource.PlayOneShot(settings.solvedSound);
-                onSolved.Invoke();
-            }
-        }
-
-        private void OnButtonReset(SteppingButton callerButton)
-        {
-            if (settings.resetAllWhenWrong)
-            {
-                nextCorrectOrder = 0;
-                foreach (SteppingButton button in buttons)
+                foreach (SteppingButton eachButton in buttons)
                 {
-                    button.ResetButton();
+                    eachButton.SetStatus(false);
                 }
             }
             else
             {
-                callerButton.ResetButton();
+                button.SetStatus(isCorrect);
             }
+
+            audioSource.PlayOneShot(isCorrect ? settings.correctSound : settings.wrongSound);
+
+            if (!isCorrect)
+                return;
+
+            nextCorrectOrder++;
+
+            if (nextCorrectOrder < buttons.Length)
+                return;
+
+            audioSource.PlayOneShot(settings.solvedSound);
+            onSolved.Invoke();
+        }
+
+        private void OnButtonReset(SteppingButton button)
+        {
+            if (settings.resetAllWhenWrong)
+                nextCorrectOrder = 0;
+
+            button.ResetButton();
         }
 
 #if UNITY_EDITOR

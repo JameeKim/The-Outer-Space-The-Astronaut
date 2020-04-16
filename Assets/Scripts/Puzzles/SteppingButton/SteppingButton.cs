@@ -12,7 +12,6 @@ namespace Puzzles.SteppingButton {
         private readonly SteppingButtonEvent onReset = new SteppingButtonEvent();
 
         private SpriteRenderer spriteRenderer;
-        private AudioSource audioSource;
 
         public SteppingButtonSettings Settings { get; set; }
         public int SteppingOrder { get; set; }
@@ -20,7 +19,6 @@ namespace Puzzles.SteppingButton {
         void Awake()
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
-            audioSource = GetComponent<AudioSource>();
 
             spriteRenderer.color = Settings.normalTintColor;
         }
@@ -56,19 +54,10 @@ namespace Puzzles.SteppingButton {
             if (isCorrect)
             {
                 spriteRenderer.color = Settings.validTintColor;
-                audioSource.PlayOneShot(Settings.correctSound);
-
-                // feedback of the success
-                Debug.Log("Checking Puzzle Answer : matched an order of the puzzle");
             }
             else
             {
                 spriteRenderer.color = Settings.wrongTintColor;
-                audioSource.PlayOneShot(Settings.wrongSound);
-
-                // feedback of the failure
-                Debug.Log("Checking Puzzle Answer : mismatched an order of the puzzle");
-
                 StartCoroutine(RevertToNormal());
             }
         }
