@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f71b64d75093464cbc0e086266dcd85e, type: 3}
+  m_Name: 06-FirstCaffeine
+  m_EditorClassIdentifier: 
+  dialogList: {fileID: 11400000, guid: 671bacfb577a23c46aaa6f66bb646b5d, type: 2}

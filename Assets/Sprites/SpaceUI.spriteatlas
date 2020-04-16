@@ -49,22 +49,28 @@ SpriteAtlas:
     - {fileID: 2800000, guid: b456b3d508ef2d241b348f11969fd528, type: 3}
     - {fileID: 2800000, guid: e4ae28a2a67ebb941b9ca4d9b60da450, type: 3}
     - {fileID: 2800000, guid: 2bb689b5c9d948b40b4893242ee86c1e, type: 3}
-    totalSpriteSurfaceArea: 30988
+    - {fileID: 21300000, guid: 8eeee70ab7e046340a699a184c4465df, type: 3}
+    - {fileID: 2800000, guid: ca023bc2898623f458bd07f8dde36127, type: 3}
+    totalSpriteSurfaceArea: 41482
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: e4ae28a2a67ebb941b9ca4d9b60da450, type: 3}
+  - {fileID: 21300000, guid: ca023bc2898623f458bd07f8dde36127, type: 3}
   - {fileID: 21300000, guid: 2bb689b5c9d948b40b4893242ee86c1e, type: 3}
   - {fileID: 21300000, guid: b456b3d508ef2d241b348f11969fd528, type: 3}
   - {fileID: 21300000, guid: 90824838d2e607a47a3cbf994e6287dd, type: 3}
+  - {fileID: 21300000, guid: 8eeee70ab7e046340a699a184c4465df, type: 3}
   - {fileID: 21300000, guid: 599207ba4e941ad448f9b0ee61020a5f, type: 3}
   - {fileID: 21300000, guid: f29d604b9b137da49b60ee01c65b5d58, type: 3}
   - {fileID: 21300000, guid: 0cab52fbec8580e47a10013f72a656ff, type: 3}
   m_PackedSpriteNamesToIndex:
   - metalPanel_blueCorner_top_right
+  - metalPanel_yellow
   - metalPanel_blueCorner_bottom
   - metalPanel_blueCorner_top_left
   - squareBlue
+  - squareRed
   - glassPanel
   - square_shadow
   - metalPanel_red

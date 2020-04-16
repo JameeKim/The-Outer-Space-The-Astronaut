@@ -2,12 +2,11 @@
 using UnityEngine;
 
 namespace Items {
-    [DisallowMultipleComponent]
-    [RequireComponent(typeof(Interactable))]
-    public class Caffeine : MonoBehaviour
+    public class Caffeine : Consumable
     {
         public int enhancedValue = 1;
-        public void OnConsume(GameObject player)
+
+        protected override void Consume(GameObject player)
         {
             //Debug.Log("Player consumed a caffeine");
             CombatEntity combatEntity = player.GetComponent<CombatEntity>();

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e24b27e4754629875c4e7bfa7eb232, type: 3}
+  m_Name: GeneratorUnlocked
+  m_EditorClassIdentifier: 
+  isTutorial: 1
+  dialogItems:
+  - defaultName: 1
+    speakerName: 
+    content: It worked! So it seems like this thing can be unlocked with a key with
+      the matching color of the gem on the top.
+  - defaultName: 1
+    speakerName: 
+    content: And something appeared on the right. Those things seem like they can
+      be stepped on.
+  - defaultName: 1
+    speakerName: 
+    content: Let's see what happens when I step on them.

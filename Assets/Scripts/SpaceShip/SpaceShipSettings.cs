@@ -2,7 +2,6 @@
 using UnityEngine;
 
 namespace SpaceShip {
-    [CreateAssetMenu(fileName = "NewSpaceShipSettings", menuName = "New Space Ship Settings", order = 5)]
     public class SpaceShipSettings : ScriptableObject
     {
         [ListDrawerSettings(Expanded = true, ShowIndexLabels = true)]

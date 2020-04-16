@@ -14,6 +14,10 @@ namespace Generators {
         [SceneObjectsOnly]
         public KeyInventory inventory;
 
+        public UnityEvent onTryUnlock;
+
+        public UnityEvent onUnlocked;
+
         public UnityEvent onActivated;
 
         private GameObject keyUI;
@@ -27,7 +31,10 @@ namespace Generators {
                 return; // do nothing if this is already activated or unlocked
 
             if (!inventory.CanActivate(this))
+            {
+                onTryUnlock.Invoke();
                 return; // do nothing if the player does not have the key
+            }
 
             Unlock();
 
@@ -63,6 +70,8 @@ namespace Generators {
 
             if (unlockSoundPlayer != null)
                 unlockSoundPlayer.Play();
+
+            onUnlocked.Invoke();
         }
     }
 }

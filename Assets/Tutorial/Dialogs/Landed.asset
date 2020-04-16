@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e24b27e4754629875c4e7bfa7eb232, type: 3}
+  m_Name: Landed
+  m_EditorClassIdentifier: 
+  isTutorial: 1
+  dialogItems:
+  - defaultName: 1
+    speakerName: 
+    content: Ouch... Thank god I'm alive.
+  - defaultName: 1
+    speakerName: 
+    content: What is this place?
+  - defaultName: 1
+    speakerName: 
+    content: It seems like the spaceship is fine, but out of power.
+  - defaultName: 1
+    speakerName: 
+    content: Let's explore this planet and see if there's a way to return home.
+  - defaultName: 1
+    speakerName: 
+    content: I can move around using the [arrow keys].
+  - defaultName: 1
+    speakerName: 
+    content: Or I can also use [W] to move up, [A] to left, [S] to down, and [D]
+      to right.
+  - defaultName: 1
+    speakerName: 
+    content: I wonder what those pink crystals are on the left?
