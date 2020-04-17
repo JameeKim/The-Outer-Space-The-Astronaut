@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0181d05aa815449f9ba979e4d9dac312, type: 3}
   m_Name: WormStat
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  attack: 1
-  defense: 0
+  maxHealth: 30
+  attack: 5
+  defense: 2

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SlimeStat
   m_EditorClassIdentifier: 
   maxHealth: 20
-  attack: 1
+  attack: 2
   defense: 0

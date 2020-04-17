@@ -46030,7 +46030,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -46066,7 +46066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a5f424d47ea39b43a7df87f1a155e74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 20
+  acceleration: 30
 --- !u!114 &868935329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50498,8 +50498,8 @@ Transform:
   - {fileID: 280959289}
   - {fileID: 199146981}
   - {fileID: 453241987}
-  - {fileID: 2578463}
   - {fileID: 983280389}
+  - {fileID: 2578463}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
