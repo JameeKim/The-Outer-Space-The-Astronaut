@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0181d05aa815449f9ba979e4d9dac312, type: 3}
-  m_Name: SlimeStat
+  m_Script: {fileID: 11500000, guid: 96fc585008f04a4c95507dba651f1c0c, type: 3}
+  m_Name: CombatSettings
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  attack: 2
-  defense: 0
+  pushBackForce: 8
