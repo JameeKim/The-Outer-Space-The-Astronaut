@@ -8,6 +8,10 @@ namespace Combat {
     [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
     public class CombatEntity : MonoBehaviour
     {
+        [FoldoutGroup("Settings")]
+        [InlineEditor(InlineEditorObjectFieldModes.Hidden)]
+        public CombatSettings settings;
+
         [ValidateInput("MustBeSet")]
         public CombatStat combatStat;
 
@@ -176,7 +180,7 @@ namespace Combat {
 
             // This method will be called on the other side (other `CombatEntity`), too.
             // Therefore, there is no need to call `GetAttacked` of the other one here.
-            rigidBody.AddForce(other.relativeVelocity.normalized * 5.0f, ForceMode2D.Impulse);
+            rigidBody.AddForce(other.relativeVelocity.normalized * settings.pushBackForce, ForceMode2D.Impulse);
             GetAttacked(otherCombatEntity.CurrentAttack);
             onAttack.Invoke(other, this, otherCombatEntity);
         }

@@ -46092,6 +46092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2ebe2cbba641deafac87bac04e3a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: 5b42d658c56948e429ec8395545ce7ef, type: 2}
   combatStat: {fileID: 11400000, guid: 5e46f10d4529c4342a15d7fe0d9557c6, type: 2}
   attackTargetLayer:
     serializedVersion: 2
